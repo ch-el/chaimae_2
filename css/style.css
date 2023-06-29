@@ -521,7 +521,7 @@ body{
     background-color: #101010;
     background-repeat: no-repeat;
     background-size: cover;
-
+    color: white;
 }
 
 .contact {
@@ -615,7 +615,7 @@ form textarea {
 .register-form form input {
     color: white;
     padding: 17px;
-    background-color: #191919;
+    background-color: #e31414;
     font-size: 20px;
     outline: none;
     border: none;
@@ -634,7 +634,7 @@ form textarea {
 
 .register-form form .submitbtn {
     display: inline-block;
-    background-color: #fc0050;
+    background-color: #453238;
     font-size: 27px;
     font-weight: 600px;
     border: 2px solid transparent;

@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #c2c0c0;
+    
+}
+
+.contenedor{
+    max-width: min(90%, 1400px);
+    height: auto;
+    background: #fff;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.encabezado{
+    max-width: min(100%, 1400px);
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+
+.encabezado video{
+    max-width: min(100%, 1400px);
+}
+
+.logoheader{
+    width: 15%;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    z-index: 5;
+}
+
+
+.logoheader img{
+    width: 100%;
+    color: #fff;
+}
+
+.navmenu {
+    max-width: min(100%, 1400px);
+    padding: 10px;
+    display: flex;
+    justify-content:end;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 5;
+    
+  }
+  
+  .toggle-btn {
+    display: none;
+  }
+  
+  .toggle-btn span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+   
+  }
+
+  #toggle{
+    display: none;
+  }
+  
+  .menu-list {
+    max-width: min(100%, 1400px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+  }
+  
+  .menu-list li {
+    margin-right: 10px;
+    list-style: none;
+    
+  }
+  
+  .menu-list li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(0.8em, 2.5vw, 1.5em);
+   
+  }
+
+  .menu-list li a:hover {
+    background-color: #333;
+    color: #3ed818;
+  }
+
+/* .navbar {
+    display: inline-block;
+    width: 60%;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row; 
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 5;
+    
+  }
+ 
+    
+  .navbar li {
+    display: flex;
+    gap: 10px;
+    margin: auto;
+  }
+  
+  .navbar li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: clamp(0.8em, 2.5vw, 1.5em);
+  }
+  
+  */
+  
+  @media (max-width: 768px) {
+    .toggle-btn {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .menu-list {
+      display: none;
+    }
+  
+    .menu-list.active {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .menu-list li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+
+

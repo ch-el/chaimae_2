@@ -7,15 +7,12 @@
     scroll-behavior: smooth;
 }
 
-body{
-    background: #101010;
-}
-
 .title {
     text-decoration: none;
     /* display: inline-block; */
     font-size: 4vh;
     color: rgb(255, 255, 255);
+    background-color: #248d1b;
     padding: 14px 17px;
     margin-top: 1%;
     text-align: center;
@@ -28,14 +25,21 @@ body{
     transition: ease 0.3s;
 }
 
+.title p{
+    font-size: 1.2em;
+}
+
+.title p:hover{
+
+    color: rgb(205, 129, 199);
+}
+
 .title h1:hover {
     color: rgb(205, 129, 199);
-
-
 }
 
 #demo {
-    background: #84A6D6;
+    background: #be90a6;
     color: black;
     text-align: center;
     font-size: 1.5em;
@@ -100,16 +104,41 @@ body{
 
 .container-image {
     width: 100%;
-    display: flex;
+    position: relative;
+    display: inline-block;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
 
+
 .container-image img {
+    display: block;
     width: 100%;
+    height: auto;
     padding: 10px;
     margin-bottom: 15px;
 }
+
+.container-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(253, 253, 253);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.container-image:hover::after {
+    opacity: 0.5;
+}
+
+
+
+
 
 .container-box h4 {
     font-size: 20px;
@@ -140,12 +169,10 @@ body{
 }
 
 
-
-
 .btn_leer {
 
     background-color: rgb(205, 129, 199);
-    color: white;
+    color: rgb(0, 0, 0);
     width: 20%;
     height: 5vh;
     font-size: 1.2em;
@@ -155,7 +182,7 @@ body{
 }
 
 .btn_leer:hover {
-    background-color: rgb(60, 2, 49);
+    background-color: rgb(245, 72, 29);
 
 }
 
@@ -279,6 +306,34 @@ body{
     cursor: pointer;
 }
 
+/* CUIDESDES LIST JAVASCRIPT */
+.ciudades-list{
+background-color: #aaa;
+margin-bottom: 2%;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+   text-align: center;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+
+
 /* Newsletter */
 
 .newsletter {
@@ -286,6 +341,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    background-color: #78c971;
 }
 
 .newstext h2 {
@@ -338,16 +394,53 @@ body{
     color: rgb(21, 74, 74);
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #e69eda;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /* Footer */
 
 .footer {
-    margin-top: 80px;
+    margin-top: 2%;
     background-color: rgb(202, 28, 191);
+    height: 48vh;
 }
 
 .foot {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .footer-content {
@@ -361,7 +454,7 @@ body{
     margin-top: 30px;
     font-size: 20px;
     font-weight: 600;
-    color: black;
+    color: rgb(255, 255, 255);
     margin-bottom: 30px;
     position: relative;
 }
@@ -374,23 +467,23 @@ body{
     width: 70px;
     left: 0;
     bottom: -7px;
-    background: black;
+    background: rgb(255, 255, 255);
 }
 
 .footlinks ul li {
-    margin-bottom: 15px;
+    margin-bottom: 2%;
 }
 
 .footlinks ul li a {
-    font-size: 17px;
-    color: black;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
     display: block;
     transition: ease 0.30s;
 }
 
 .footlinks ul li a:hover {
     transform: translate(6px);
-    color: rgb(8, 8, 8);
+    color: rgb(134, 180, 8);
 }
 
 .social a {
@@ -411,18 +504,21 @@ body{
     transform: scale(1.2);
 }
 
-.end {
+.fin {
     text-align: center;
-    padding-top: 60px;
+    padding-top: 10px;
     padding-bottom: 12px;
 }
 
-.end p {
-    font-size: 15px;
-    color: rgb(8, 8, 8);
+.fin p {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
     letter-spacing: 1px;
-    font-weight: 300;
+    font-weight: 400;
 }
+
+
+
 
 /* About Us */
 
@@ -515,6 +611,68 @@ body{
     transform: scale(1.2);
 }
 
+/* ******* */
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .about {
+      padding: 20px;
+    }
+  
+    .main {
+      flex-direction: column;
+    }
+  
+    .abt-text {
+        width: 300px;
+    }
+
+    .about img {
+        height: auto;
+        width: 200px;
+    }
+
+    .abt-text h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    
+  }
+  
+  /* Estilos para tabletas */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .about {
+      padding: 40px;
+    }
+  
+    .main {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .abt-text {
+        width: 300px;
+    }
+
+    .about img {
+        height: auto;
+        width: 280px;
+    }
+
+    .abt-text h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+  }
+  
+
+
+
+
+
 /* Contact Us */
 
 .contactbody {
@@ -582,7 +740,7 @@ form textarea {
 
 }
 
-/* Registration Form */
+/********* Registration Form **********/
 
 .register-body {
     background-color: #101010;
@@ -613,9 +771,9 @@ form textarea {
 }
 
 .register-form form input {
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 17px;
-    background-color: #e31414;
+    background-color: #ffffff;
     font-size: 20px;
     outline: none;
     border: none;
@@ -699,6 +857,8 @@ form textarea {
     color: rgb(197, 167, 44);
 }
 
+/* --------------------------------------------------- */
+
 .cuerpo{
     max-width: min(100%, 1400px);
     margin-top: 10%;
@@ -710,6 +870,7 @@ form textarea {
 .cuerpo h2{
     text-align: center;
     text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(0.7em, 2.5vw, 2em);
 }
 
@@ -726,7 +887,7 @@ form textarea {
     height: auto;
 }
 
-.prev-button,
+/* .prev-button,
 .next-button {
     position: absolute;
     top: 50%;
@@ -738,16 +899,19 @@ form textarea {
     color: #fff;
     font-size: 24px;
     cursor: pointer;
-}
+} */
 
-.prev-button {
+/* .prev-button {
     left: 10px;
 }
 
 .next-button {
     right: 10px;
-}
+} */
 
+
+
+/* ----------------------------------------------------- */
 /*MEDIA Query*/
 
 @media (max-width:1024px) {
@@ -814,7 +978,7 @@ form textarea {
     }
 
     #demo {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
     .text h2 {
@@ -846,3 +1010,52 @@ form textarea {
 }
 
 
+/* btn de leer mas en index.html */
+
+@media screen and (max-width: 768px) {
+ 
+    .btn_leer{
+   
+    width: 25%;
+    height: 10vh;
+    font-size: 1.2em;
+}
+
+  }
+
+/* footer */
+@media screen and (max-width: 768px) {
+
+
+    .footer {
+        background-color: rgb(202, 28, 191);
+        height: 60vh;
+    }
+
+
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footlinks {
+      margin-bottom: 20px;
+    }
+  
+    .footlinks ul {
+      padding-left: 0;
+    }
+  
+    .social {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .fin {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  
